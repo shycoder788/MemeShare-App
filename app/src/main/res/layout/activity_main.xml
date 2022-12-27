@@ -15,7 +15,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/shareButton"
         android:background="#000000"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/app_name" />
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width= "wrap_content"
@@ -29,28 +30,30 @@
         android:id="@+id/shareButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:onClick="shareMeme"
         android:padding="32dp"
         android:text="@string/share"
+        android:textColor="#FA71CD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/guideline2"
-        android:textColor="@color/core"
-        android:onClick="shareMeme"
-        android:background="@color/shareButtoncolor"/>
+        tools:ignore="UsingOnClickInXml" />
 
 
     <Button
         android:id="@+id/nextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/nextuttoncolor"
+        android:background="@drawable/custom_button"
         android:onClick="nextmeme"
         android:padding="32dp"
         android:text="@string/next"
-        android:textColor="@color/core"
+        android:textColor="@android:color/holo_green_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/guideline2"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="UsingOnClickInXml" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
